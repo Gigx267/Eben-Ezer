@@ -148,79 +148,74 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <section class="hero-section">
-        <video autoplay muted playsinline class="hero-video">
-          <source src="mv2 (online-video-cutter.com).mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h3 class="text-white mb-3 d-none d-sm-block"> <BR><BR><BR><BR>   Living with Meaning and Purpose</h3>
-                <h2 class="display-3 text-white mb-3">Lutheran Care Center </h2>
-                <h5 class="text-white mb-3 d-none d-sm-block">Eben Ezer creates an environment where life happens
-                    providing the environment for a life filled with independence and good health</h5>
-                <a href="about.html" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">About Us</a>
-                <a href="about.html" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More   </a>
-          <div class="hero-buttons">
-   
-          </div>
+    <!-- Hero Section Start -->
+<section class="hero-section">
+    <video autoplay muted playsinline loop preload="metadata" class="hero-video">
+        <source src="mv2 (online-video-cutter.com).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h3 class="text-white mb-3 d-none d-sm-block"><BR><BR><BR><BR>Living with Meaning and Purpose</h3>
+        <h2 class="display-3 text-white mb-3">Lutheran Care Center</h2>
+        <h5 class="text-white mb-3 d-none d-sm-block">Eben Ezer creates an environment where life happens providing the environment for a life filled with independence and good health</h5>
+        <div class="hero-buttons">
+            <a href="about.html" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">About Us</a>
+            <a href="about.html" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
         </div>
-      </section>
-      
-      <style>
-      .hero-section {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-      }
-      
-      .hero-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
-      }
-      
-      .hero-content {
-        position: relative;
-        z-index: 1;
-      }
-      
-      .hero-content h1 {
-        font-size: 4em;
-        margin-bottom: 0.5em;
-      }
-      
-      .hero-content p {
-        font-size: 1.5em;
-        margin-bottom: 1em;
-      }
-      
-      .hero-buttons .btn {
-        margin: 0 0.5em;
-        padding: 0.75em 1.5em;
-        font-size: 1em;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-      
-      .hero-buttons .btn-primary {
-        background-color: #007bff;
-        color: white;
-      }
-      
-      .hero-buttons .btn-secondary {
-        background-color: #6c757d;
-        color: white;
-      }
-      </style>
+    </div>
+</section>
+
+<style>
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure text remains readable on mobile */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content h5 {
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+<!-- Optional: Add this JavaScript to force video playback on iOS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('.hero-video');
+    video.play().catch(function(error) {
+        // Handle any errors, but most browsers will block autoplay with sound
+        console.log('Video autoplay prevented:', error);
+    });
+});
+</script>
    <!-- About Start -->
    <div class="container py-5">
     <div class="row py-5">
